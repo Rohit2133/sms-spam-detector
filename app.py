@@ -3,8 +3,7 @@ import pickle
 import spacy
 from streamlit_lottie import st_lottie
 import requests
-import subprocess
-import importlib.util
+
 # from wordcloud import WordCloud
 # import matplotlib.pyplot as plt
 
@@ -28,12 +27,6 @@ st.set_page_config(page_title="SMS Spam Detector", page_icon="📩", layout="cen
 
 # add_bg_from_url()
 
-
-# ✅ Check and download spaCy model if not present
-try:
-    spacy.load("en_core_web_sm")
-except OSError:
-    subprocess.run(["python", "-m", "spacy", "download", "en_core_web_sm"])
 
 # Load spaCy English model
 nlp = spacy.load("en_core_web_sm")
