@@ -28,8 +28,11 @@ st.set_page_config(page_title="SMS Spam Detector", page_icon="📩", layout="cen
 
 # add_bg_from_url()
 
-# Auto-download spaCy model on Streamlit Cloud
-if not spacy.util.is_package("en_core_web_sm"):
+
+# ✅ Check and download spaCy model if not present
+try:
+    spacy.load("en_core_web_sm")
+except OSError:
     subprocess.run(["python", "-m", "spacy", "download", "en_core_web_sm"])
 
 # Load spaCy English model
