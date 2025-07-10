@@ -1,8 +1,9 @@
 import streamlit as st
 import pickle
-import spacy
 from streamlit_lottie import st_lottie
 import requests
+from spacy.cli import download
+download("en_core_web_sm")
 
 
 # from wordcloud import WordCloud
