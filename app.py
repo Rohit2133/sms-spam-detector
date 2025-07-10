@@ -2,9 +2,7 @@ import streamlit as st
 import pickle
 from streamlit_lottie import st_lottie
 import requests
-from spacy.cli import download
-download("en_core_web_sm")
-
+import spacy
 
 # from wordcloud import WordCloud
 # import matplotlib.pyplot as plt
