@@ -3,6 +3,7 @@ import pickle
 import spacy
 from streamlit_lottie import st_lottie
 import requests
+import en_core_web_sm
 
 # from wordcloud import WordCloud
 # import matplotlib.pyplot as plt
@@ -29,7 +30,7 @@ st.set_page_config(page_title="SMS Spam Detector", page_icon="📩", layout="cen
 
 
 # Load spaCy English model
-nlp = spacy.load("en_core_web_sm")
+nlp = en_core_web_sm.load()
 
 def transform_text(text):
     doc = nlp(str(text))  # Ensure input is string
