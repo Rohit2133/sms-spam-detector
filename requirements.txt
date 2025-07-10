@@ -1,6 +1,6 @@
 streamlit
 scikit-learn
-spacy
+spacy[en_core_web_sm]
 pandas
 numpy
 matplotlib
